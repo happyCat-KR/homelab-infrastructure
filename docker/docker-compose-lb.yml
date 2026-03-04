@@ -1,0 +1,7 @@
+services:
+  web:
+    image: <dockerhub-username>/task-frontend:latest
+    container_name: task-web
+    ports:
+      - "80:80"
+    restart: unless-stopped

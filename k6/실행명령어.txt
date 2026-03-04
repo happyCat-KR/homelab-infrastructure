@@ -1,0 +1,5 @@
+.\k6.exe run --vus 30 --duration 30s .\test-internal.js
+.\k6.exe run --vus 30 --duration 30s .\test-external.js
+
+vus: 사용자
+duration: 시간

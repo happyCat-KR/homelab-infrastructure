@@ -1,0 +1,11 @@
+services:
+  app:
+    image: <dockerhub-username>/task-api:latest
+    container_name: task-api
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://<dbIP:3306>/taskdb
+      SPRING_DATASOURCE_USERNAME: 계정
+      SPRING_DATASOURCE_PASSWORD: 비밀번호
