@@ -67,3 +67,24 @@ Client -> Router -> Load Balancer (Nginx) -> (API-01 or API-02) -> MySQL
   - MySQL Docker 컨테이너 기반 DB 서버
   - API 서버에서 발생하는 데이터 요청 처리
 이 구조를 통해 서버 역할 분리, 트래픽 분산, 서비스 확장 구조를 실험할 수 있도록 설계하였다.
+
+## Infrastructure Stack
+HomeLab 환경에서 서비스 인프라를 구축하기 위해 다음과 같은 기술 스택을 사용하였다.
+
+- OS
+  - Ubuntu Server 24.04
+- Virtualization
+  - KVM
+  - libvirt
+- Container
+  - Docker
+  - Docker Compose
+- Web Server / Load Balancer
+  - Nginx
+- Backend
+  - Spring Boot
+- Database
+  - MySQL
+- Load Testing
+  - k6
+각 서버는 KVM 기반 VM 환경에서 운영되며, 서비스는 Docker 컨테이너 기반으로 배포된다.
