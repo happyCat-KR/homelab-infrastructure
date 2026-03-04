@@ -134,6 +134,8 @@ Client -> Nginx (Load Balancer) -> Spring Boot API Servers -> MySQL Database
 
 ### 테스트 환경
 - Load Testing Tool: k6
+- Virtual Users (VU): 30 / 60 / 100
+- Test Duration: 30s
 - Target API: /tasks
 - Request Type: HTTP GET
 - Architecture: Nginx Load Balancer → API Servers → MySQL
