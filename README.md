@@ -47,15 +47,7 @@ HomeLab 환경에서 서비스 인프라를 실제 운영 환경과 유사하게
 클라이언트 요청은 Nginx Load Balancer를 통해 API 서버로 분산되며, API 서버는 MySQL 데이터베이스와 통신하여 데이터를 처리한다.
 
 ### 전체 구조
-Client
-  ↓
-Router
-  ↓
-Load Balancer (Nginx)
-  ↓        ↓
-API-01    API-02
-     ↓
-    MySQL
+Client -> Router -> Load Balancer (Nginx) -> (API-01 or API-02) -> MySQL
     
 ### 구성 설명
 - Client
